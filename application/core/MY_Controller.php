@@ -23,7 +23,7 @@ class Application extends CI_Controller
 
 		//  Set basic view parameters
 		$this->data = array ();
-		$this->data['pagetitle'] = 'CodeIgniter3.1 Starter 2';
+		$this->data['pagetitle'] = 'Atrexa Bar';
 		$this->data['ci_version'] = (ENVIRONMENT === 'development') ? 'CodeIgniter Version <strong>'.CI_VERSION.'</strong>' : '';
 	}
 
@@ -32,8 +32,12 @@ class Application extends CI_Controller
 	 */
 	function render($template = 'template')
 	{
-		$this->data['content'] = $this->parser->parse($this->data['pagebody'], $this->data, true);
-		$this->parser->parse('template', $this->data);
+        // use layout content if provided
+        if (!isset($this->data['content']))
+            $this->data['content'] = $this->parser->parse($this->data['pagebody'], $this->data, true);
+            $this->data['navbar'] = $this->parser->parse('navbar', $this->data, true);
+        $this->parser->parse($template, $this->data);
+        
 	}
 
 }
