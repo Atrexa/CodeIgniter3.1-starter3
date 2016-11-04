@@ -1,7 +1,11 @@
-#COMP4711 lab5
+#COMP4711 lab6
 > Group12 member: Tracy(Cap)&Alex
 > For developers:
 > Please write the latest log on top
+
+### Version 0.0.5
+1. Install package Caboose
+2. Add session for user control
 
 ### Version 0.0.4
 1. Make a shopping page

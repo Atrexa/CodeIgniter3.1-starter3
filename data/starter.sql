@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Oct 16, 2016 at 11:01 PM
+-- Generation Time: Oct 19, 2016 at 12:10 AM
 -- Server version: 5.7.13
 -- PHP Version: 7.0.8
 
@@ -23,9 +23,10 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `Categories`
+-- Table structure for table `categories`
 --
 
+DROP TABLE IF EXISTS `Categories`;
 CREATE TABLE `Categories` (
   `id` varchar(1) NOT NULL,
   `name` varchar(64) NOT NULL,
@@ -34,7 +35,7 @@ CREATE TABLE `Categories` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `Categories`
+-- Dumping data for table `categories`
 --
 
 INSERT INTO `Categories` (`id`, `name`, `description`, `image`) VALUES
@@ -45,9 +46,23 @@ INSERT INTO `Categories` (`id`, `name`, `description`, `image`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `Menu`
+-- Table structure for table `ci_sessions`
 --
 
+CREATE TABLE `ci_sessions` (
+  `id` varchar(128) NOT NULL,
+  `ip_address` varchar(45) NOT NULL,
+  `timestamp` int(10) UNSIGNED NOT NULL DEFAULT '0',
+  `data` blob NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `menu`
+--
+
+DROP TABLE IF EXISTS `Menu`;
 CREATE TABLE `Menu` (
   `id` int(11) NOT NULL,
   `name` varchar(32) NOT NULL,
@@ -58,7 +73,7 @@ CREATE TABLE `Menu` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `Menu`
+-- Dumping data for table `menu`
 --
 
 INSERT INTO `Menu` (`id`, `name`, `description`, `price`, `picture`, `category`) VALUES
@@ -74,9 +89,10 @@ INSERT INTO `Menu` (`id`, `name`, `description`, `price`, `picture`, `category`)
 -- --------------------------------------------------------
 
 --
--- Table structure for table `Orderitems`
+-- Table structure for table `orderitems`
 --
 
+DROP TABLE IF EXISTS `Orderitems`;
 CREATE TABLE `Orderitems` (
   `order` int(11) NOT NULL,
   `item` int(11) NOT NULL,
@@ -87,9 +103,10 @@ CREATE TABLE `Orderitems` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `Orders`
+-- Table structure for table `orders`
 --
 
+DROP TABLE IF EXISTS `Orders`;
 CREATE TABLE `Orders` (
   `num` int(11) NOT NULL,
   `date` datetime NOT NULL,
@@ -103,25 +120,31 @@ CREATE TABLE `Orders` (
 --
 
 --
--- Indexes for table `Categories`
+-- Indexes for table `categories`
 --
 ALTER TABLE `Categories`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `Menu`
+-- Indexes for table `ci_sessions`
+--
+ALTER TABLE `ci_sessions`
+  ADD KEY `ci_sessions_timestamp` (`timestamp`);
+
+--
+-- Indexes for table `menu`
 --
 ALTER TABLE `Menu`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `Orderitems`
+-- Indexes for table `orderitems`
 --
 ALTER TABLE `Orderitems`
   ADD PRIMARY KEY (`order`,`item`);
 
 --
--- Indexes for table `Orders`
+-- Indexes for table `orders`
 --
 ALTER TABLE `Orders`
   ADD PRIMARY KEY (`num`);
