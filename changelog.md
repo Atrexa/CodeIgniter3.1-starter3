@@ -3,6 +3,9 @@
 > For developers:
 > Please write the latest log on top
 
+### Version 0.0.6
+1.Add toggle user and admin function
+
 ### Version 0.0.5
 1. Install package Caboose
 2. Add session for user control
