@@ -48,7 +48,13 @@ class Maintenance extends Application {
 		foreach($cats as $code => $category) // make it into an associative array
 		$codes[$code] = $category->name;
 		$this->data['fcategory'] = makeCombobox('Category', 'category', $record->category,$codes);
+		$this->data['zsubmit'] = makeSubmitButton('Save', 'Submit changes');
 
 		$this->render();
 	}
+
+	function cancel() {    
+		$this->session->unset_userdata('key');   
+		$this->session->unset_userdata('record');    
+		$this->index(); }
 }
