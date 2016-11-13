@@ -11,7 +11,8 @@
         <input type="file" id="replacement" name="replacement"/> 
     </div>
     {fcategory}
-    {zsubmit} <a class="btn btn-default" role="button" href="/maintenance/cancel">Cancel</a>
+    {zsubmit}
+    <a class="btn btn-default" role="button" href="/maintenance/cancel">Cancel</a>
     <a class="btn btn-default" role="button" href="/maintenance/delete">Delete</a>
     <a class="btn btn-default" role="button" href="/maintenance/add">Add a new menu item</a>   
 </form>
