@@ -3,6 +3,13 @@
 > For developers:
 > Please write the latest log on top
 
+### Version 0.0.7
+1. Add user role for maintenance page
+2. Add form for admin to edit
+3. Add save, delete, add function
+4. Validation with error messages
+5. Replace the picture of adding function
+
 ### Version 0.0.6
 1.Add toggle user and admin function
 

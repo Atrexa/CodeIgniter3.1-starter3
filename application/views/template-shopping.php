@@ -5,9 +5,8 @@
         <title>{pagetitle}</title>
         <meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <link rel="stylesheet" type="text/css" href="/assets/css/default.css"/>
         {caboose_styles}
-     </head>
+    </head>
     <body>
         <div class="container">
             {navbar}
@@ -30,8 +29,7 @@
                 </div>
             </div>
             {content}
-            <p class="footer">Page rendered in <strong>0.0155</strong> seconds. 
-                {ci_version}</p>
+            <p class="footer">Page rendered in <strong>0.0155</strong> seconds.{ci_version}</p>
         </div>
         {caboose_scripts}
         {caboose_trailings}

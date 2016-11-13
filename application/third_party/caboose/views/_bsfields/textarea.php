@@ -1,7 +1,4 @@
-<div class="control-group">
-    <label class="control-label" for="{name}">{label}<br/>
-    </label>
-    <div class="controls">
-        <textarea id="{name}" name="{name}" value="{value}" maxLength="{maxlen}" rows="{rows}" size="{size}" {disabled}>{value}</textarea>
-    <br/><small><em>{explain}</em></small></div>
+<div class="form-group">
+    <label for="{name}">{label}</label>
+    <textarea class="form-control" id="{name}" name="{name}" value="{value}" rows="{rows}" cols="{size}" title="{explain}" {disabled}>{value}</textarea>
 </div>
