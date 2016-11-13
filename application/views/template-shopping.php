@@ -29,8 +29,7 @@
                 </div>
             </div>
             {content}
-            <p class="footer">Page rendered in <strong>0.0155</strong> seconds. 
-                {ci_version}</p>
+            <p class="footer">Page rendered in <strong>0.0155</strong> seconds.{ci_version}</p>
         </div>
         {caboose_scripts}
         {caboose_trailings}
