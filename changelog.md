@@ -3,6 +3,10 @@
 > For developers:
 > Please write the latest log on top
 
+### Version 0.0.8
+1. Make shopping "alive", add and cancel orders.
+2. Present the order summary.
+
 ### Version 0.0.7
 1. Add user role for maintenance page
 2. Add form for admin to edit

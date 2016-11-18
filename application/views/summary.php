@@ -3,7 +3,7 @@
     <tr><th>Order #</th><th>Date/time</th><th>Amount</th></tr>
     {orders}
     <tr>
-        <td>{number}</td>
+        <td><a href="/shopping/examine/{number}">{number}</a></td>
         <td>{datetime}</td>
         <td>{total}</td>
     </tr>
